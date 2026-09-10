@@ -1,3 +1,4 @@
+import os
 import time
 from datetime import datetime, timedelta
 from googleapiclient.discovery import build
@@ -5,7 +6,7 @@ from calendar_service import get_calendar_service
 import requests
 
 # Konfigurasi Bot Telegram lu & Chat ID lu
-TOKEN = "8502324089:AAH0-q4XKrULRFN_4feRyTUbldcTvdJkzsY"
+TOKEN = os.getenv("TELEGRAM_TOKEN")
 CHAT_ID = "8791729948"  
 
 def kirim_pesan_telegram(pesan):
