@@ -39,3 +39,14 @@ if __name__ == "__main__":
     
     print("Bot Telegram siap...")
     app.run_polling()
+    import asyncio
+
+async def background_reminder(application):
+    while True:
+        try:
+            print("Mengecek deadline tugas otomatis...")
+            # Logika pengecekan tugas lu nanti ditaruh di sini
+        except Exception as e:
+            print(f"Error background reminder: {e}")
+        await asyncio.sleep(1800)
+
