@@ -4,7 +4,7 @@ from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
 from calendar_service import tambah_event
 
 # Token Bot Telegram lu
-TOKEN = "8502324089:AAH0-q4XKrULRFN_4feRyTUbldcTvdJkzsY"
+TOKEN = os.getenv("TELEGRAM_TOKEN")
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(
